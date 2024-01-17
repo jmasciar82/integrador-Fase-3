@@ -1,0 +1,1 @@
+Esta carpeta se utiliza temporalmente para subir archivos a un server ftp

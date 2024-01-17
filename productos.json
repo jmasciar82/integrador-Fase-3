@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "id": "1"
+  },
+  {
+    "nombre": "juan",
+    "precio": 34,
+    "stock": 90,
+    "id": "2"
+  },
+  {
+    "nombre": "",
+    "precio": "",
+    "stock": "",
+    "id": "3"
+  },
+  {
+    "nombre": "qwer",
+    "precio": 1234523,
+    "stock": 2345,
+    "id": "4"
+  }
+]
