@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 dotenv.config()
 
-const MODO_PERSISTENCIA = process.env.MODO_PERSISTENCIA || 'MEM' 
+const MODO_PERSISTENCIA = process.env.MODO_PERSISTENCIA || 'MONGODB' 
 const PORT = process.env.PORT || 8080
 //const STRGCNX = 'mongodb://localhost:27017'
 const STRGCNX = process.env.STRGCNX || 'mongodb://127.0.0.1'
