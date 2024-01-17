@@ -35,7 +35,7 @@ class Controlador {
 
         const {payment_id, status, merchant_order_id} = req.query
 
-        res.redirect(`http://localhost:3000/carrito?payment_id=${payment_id}&status=${status}&merchant_order_id=${merchant_order_id}`)
+        res.redirect(`http://localhost:8000/carrito?payment_id=${payment_id}&status=${status}&merchant_order_id=${merchant_order_id}`)
     }
 
     createPreference = async (req, res) =>{
