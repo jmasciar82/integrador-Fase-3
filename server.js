@@ -5,6 +5,7 @@ const CnxMongodb = require('./model/dbMongo.js')
 
 
 const RouterCarrito = require('./router/carrito.js')
+const RouterUsuarios = require('./router/usuarios.js')
 const RouterUpload = require('./router/upload.js')
 
 const cors = require('cors')
@@ -21,7 +22,10 @@ app.use(express.json())
 // ------------------ Rutas / endpoints API RESTful -------------------
 app.use('/api/productos', new RouterProductos().start())
 app.use('/api/carrito', new RouterCarrito().start())
+app.use('/api/usuarios', new RouterUsuarios().start())
+
 app.use('/api/upload', new RouterUpload().start())
+
 
 // ------------------- LISTEN DEL SERVIDOR ---------------------
 if (config.MODO_PERSISTENCIA == 'MONGODB') {

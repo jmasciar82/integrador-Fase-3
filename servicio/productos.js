@@ -16,24 +16,27 @@ class Servicio {
 
     }
 
-    obtenerProductos = async id => {
-
-
-        if (id) {
-            const producto = await this.model.obtenerProducto(id)
-            return producto
-        }
-        else {
-            const productos = await this.model.obtenerProductos()
-            return productos
+    obtenerProductos = async (id) => {
+        try {
+            if (id) {
+                const producto = await this.model.obtenerProducto(id);
+                return producto;
+            } else {
+                const productos = await this.model.obtenerProductos();
+                return productos;
+            }
+        } catch (error) {
+            console.error("Error in Axios call:", error);
+            throw error; // rethrow the error to propagate it up
         }
     }
 
+
     guardarProducto = async producto => {
-        
+
         const error = validar(producto)
         if (!error) {
-            
+
             const productoGuardado = await this.model.guardarProducto(producto)
             return productoGuardado
         } else {
